@@ -1,0 +1,32 @@
+<h2>Create Class</h2>
+<form id= "addClass" action="/class" method="post">
+  Class name:<br>
+  <input type="text" name="class_name">
+  <br>
+  Homeroom Teacher:<br>
+  <input type="text" name="homeroom_teacher">
+  <br>
+  Room number:<br>
+  <input type="number" name="room_number">
+  <br><br>
+  <input type="submit" value="addClass">
+</form>
+<br>
+<h2>Class List</h2>
+<table>
+  <tr>
+    <th>Class Name</th>
+    <th>Homeroom teacher</th>
+    <th>Room number</th>
+  </tr>
+  {{#each class}}
+  <tr>
+    <td>{{class_name}}</td>
+    <td>{{homeroom_teacher}}</td>
+    <td>{{room_number}}</td>
+    <td><button onclick="deleteClass({{class_code}})">Delete</button></td>
+  </tr>
+  {{/each}}
+</table>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

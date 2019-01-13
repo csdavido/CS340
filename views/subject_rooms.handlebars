@@ -1,0 +1,19 @@
+<h2>Subject Room List</h2>
+<table>
+  <thead>
+    <th>ID</th>
+    <th>Subject Code</th>
+    <th>Room Number</th>
+  </thead>
+  <tbody>
+  {{#each subject_rooms}}
+  <tr>
+    <td>{{id}}</td>
+    <td>{{subject_code}}</td>
+    <td>{{room_number}}</td>
+    <td><button onclick="deleteSubjectFromRoom({{id}})">Delete</button></td>
+  </tr>
+  {{/each}}
+  </tbody>
+</table>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

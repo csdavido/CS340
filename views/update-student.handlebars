@@ -1,0 +1,9 @@
+<h1>Update {{student.s_name}}:</h1>
+<form id="update-student" action="/student" method="post">
+    Name: <input type="text" name="s_name" value="{{student.s_name}}"><br>
+    Level: <input type="number" name="s_level" value="{{student.s_level}}"><br>
+    Group: <input type="text" name="s_group" value="{{student.s_group}}"><br>
+    DOB: <input type="date" name="dob" value="{{student.dob}}"><br>
+</form>
+<button onclick="updateStudent({{student.id}})">Update</button>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

@@ -1,0 +1,42 @@
+<h2>Enter Student Data</h2>
+<form id= "addStudent" action="/student" method="post">
+  Name:<br>
+  <input type="text" name="s_name">
+  <br>
+  DOB:<br>
+  <input type="date" name="dob">
+  <br>
+  Level:<br>
+  <input type="number" name="s_level">
+  <br>
+  Group:<br>
+  <input type="text" name="s_group">
+  <br><br>
+  <input type="submit" value="Add">
+</form>
+<br>
+<button onclick="searchStudent({{student.id}})"><h2>Search Students</h2></button>
+</form><h2>Student List</h2>
+<table>
+  <thead>
+    <th>Student ID</th>
+    <th>Name</th>
+    <th>Level</th>
+    <th>Group</th>
+    <th>DOB</th>
+  </thead>
+  <tbody>
+  {{#each student}}
+  <tr>
+    <td>{{id}}</td>
+    <td>{{s_name}}</td>
+    <td>{{s_level}}</td>
+    <td>{{s_group}}</td>
+    <td>{{dob}}</td>
+    <td><button onclick="deleteStudent({{id}})">Delete</button></td>
+    <td><a href="/student/{{id}}">Update</a></td>
+  </tr>
+  {{/each}}
+  </tbody>
+</table>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

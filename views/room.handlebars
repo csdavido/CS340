@@ -1,0 +1,28 @@
+<h2>Create Room</h2>
+<form id= "addRoom" action="/room" method="post">
+  Room Number:<br>
+  <input type="number" name="room_number">
+  <br>
+  Room Name:<br>
+  <input type="text" name="room_name">
+  <br><br>
+  <input type="submit" value="addRoom">
+</form>
+<br>
+<h2>Room List</h2>
+<table>
+  <tr>
+    <th>Room ID</th>
+    <th>Room Number</th>
+    <th>Room Name</th>
+  </tr>
+  {{#each room}}
+  <tr>
+    <td>{{room_id}}</td>
+    <td>{{room_number}}</td>
+    <td>{{room_name}}</td>
+    <td><button onclick="deleteRoom({{room_id}})">Delete</button></td>
+  </tr>
+  {{/each}}
+</table>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

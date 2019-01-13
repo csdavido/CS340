@@ -1,0 +1,19 @@
+<h2>Class Room List</h2>
+<table>
+  <thead>
+    <th>ID</th>
+    <th>Class Code</th>
+    <th>Room Number</th>
+  </thead>
+  <tbody>
+  {{#each class_rooms}}
+  <tr>
+    <td>{{id}}</td>
+    <td>{{class_code}}</td>
+    <td>{{room_number}}</td>
+    <td><button onclick="deleteClassFromRoom({{id}})">Delete</button></td>
+  </tr>
+  {{/each}}
+  </tbody>
+</table>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

@@ -1,0 +1,34 @@
+<!--/*  
+Author: David Rider
+Class: CS 340
+Date: Nov. 8, 2018
+Citation: https://github.com/knightsamar/CS340-Sample-Web-App/blob/master/main.js
+*/-->
+<!doctype html>
+<html>
+<head>
+	<title>Student Database</title>
+		<link rel="stylesheet" href="/static/CSS/stylesheet.css">
+    	{{#each jsscripts}}
+    	<script src="/static/{{this}}"></script>
+    	{{/each}}
+</head>
+<body>
+  <div class="navigation-bar">
+        <ul>
+          <li><a href="/student">Student</a></li>
+          <li><a href="/class">Class</a></li>
+          <li><a href="/class_enrollment">Class Enrollment</a></li>
+          <li><a href="/room">Room</a></li>
+          <li><a href="/subject_rooms">Subject Rooms</a></li>
+          <li><a href="/class_rooms">Class Rooms</a></li>
+          <li><a href="/subject">Subject</a></li>
+          <li><a href="/subject_enrollment">Subject Enrollment</a></li>
+        </ul>
+      </div>
+    <br>
+  <h1>Sahmyook Elementary 5th Grade Database</h1>
+  <h5>This database is for the purposes of storing and managing student data</h5>
+	{{{body}}}
+</body>
+</html>

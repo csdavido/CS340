@@ -1,0 +1,31 @@
+<h2>Create a Subject</h2>
+<form id= "addSubject" action="/subject" method="post">
+  Subject Name:<br>
+  <input type="text" name="subject_name">
+  <br>
+  Subject Teacher:<br>
+  <input type="text" name="subject_teacher">
+  <br>
+  Room Number:<br>
+  <input type="number" name="room_number">
+  <br><br>
+  <input type="submit" value="addSubject">
+</form>
+<br>
+<h2>Subject List</h2>
+<table>
+  <tr>
+    <th>Subject Name</th>
+    <th>Subject Teacher</th>
+    <th>Room number</th>
+  </tr>
+  {{#each subject}}
+  <tr>
+    <td>{{subject_name}}</td>
+    <td>{{subject_teacher}}</td>
+    <td>{{room_number}}</td>
+    <td><button onclick="deleteSubject({{subject_code}})">Delete</button></td>
+  </tr>
+  {{/each}}
+</table>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

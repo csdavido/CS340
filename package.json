@@ -1,0 +1,24 @@
+/*  
+Author: David Rider
+Class: CS 240
+Date: Nov. 1, 2018
+Citation: https://github.com/knightsamar/CS340-Sample-Web-App/blob/master/main.js
+*/
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "Hello world with express and node.js",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Rider",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.2",
+    "express-handlebars": "^2.0.1",
+    "express-session": "^1.11.3",
+    "mysql": "^2.8.0"
+  }
+}
